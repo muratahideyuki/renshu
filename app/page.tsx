@@ -1,6 +1,15 @@
 import Image from "next/image";
+import { getNewsList } from "@/app/_libs/microcms";
+import { TOP_NEWS_LIMIT } from "@/app/_constants";
+import NewsList from "@/app/_components/NewsList";
 
-export default function Home() {
+import Link from "next/link";
+
+export default async function Home() {
+  const data = await getNewsList({
+    limit: TOP_NEWS_LIMIT,
+  });
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
       {/* ナビゲーションバー */}
@@ -30,13 +39,9 @@ export default function Home() {
           This is a minimal example built with Next.js and Tailwind CSS.
           Customize it to make it your own!
         </p>
-        <Image
-          src="/vercel.svg"
-          alt="Vercel Logo"
-          width={150}
-          height={33}
-          className="mx-auto"
-        />
+
+        <NewsList news={data.contents} />
+
         <div className="mt-8">
           <a
             href="#"
