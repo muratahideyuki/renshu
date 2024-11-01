@@ -10,6 +10,8 @@ export default async function Home() {
     limit: TOP_NEWS_LIMIT,
   });
 
+  const text = "Welcome to My Simple Website";
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
       {/* ナビゲーションバー */}
@@ -33,8 +35,17 @@ export default async function Home() {
       {/* メインコンテンツ */}
       <div className="text-center max-w-2xl">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Welcome to My Simple Website
+          {text.split("").map((char, index) => (
+            <span
+              key={index}
+              className="inline-block opacity-0 animate-fadeIn"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {char}
+            </span>
+          ))}
         </h1>
+
         <p className="text-gray-600 mb-6">
           This is a minimal example built with Next.js and Tailwind CSS.
           Customize it to make it your own!
