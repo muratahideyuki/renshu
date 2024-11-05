@@ -4,5 +4,5 @@ type Props = {
   category: Category;
 };
 export default function Category({ category }: Props) {
-  return <span>{category.name}</span>;
+  return <span>{category?.name}</span>;
 }

@@ -13,7 +13,7 @@ export default async function Home() {
   const text = "MURATA  HIDEYUKI";
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-6 animate-gradientAnimation">
+    <main className="min-h-screen flex flex-col items-center justify-center p-6 ">
       {/* メインコンテンツ */}
       <div className="text-center ">
         <h1 className="text-9xl text-gray-800 mb-4">
