@@ -12,7 +12,6 @@ export default function Article({ data }: Props) {
   return (
     <main>
       <h1 className="text-xl">
-        ああい
         <span className="blur-sm mr-3">●</span>
         {data.title}
       </h1>

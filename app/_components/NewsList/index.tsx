@@ -35,9 +35,7 @@ export default function NewsList({ news }: Props) {
           )}
           <dl>
             <dt>{article.title}</dt>
-            <dd>
-              <br />
-            </dd>
+            <dd></dd>
           </dl>
         </li>
       ))}
