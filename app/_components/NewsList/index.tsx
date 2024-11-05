@@ -35,11 +35,10 @@ export default function NewsList({ news }: Props) {
               />
             )}
             <dl>
-              <dt>title:{article.title}</dt>
+              <dt>title{article.title}</dt>
               <dd>
-                <Category category={article.category} />
                 <br />
-                <Date date={article.publishedAt ?? article.createdAt} />
+
                 <p>
                   <button
                     role="link"

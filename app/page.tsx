@@ -10,31 +10,13 @@ export default async function Home() {
     limit: TOP_NEWS_LIMIT,
   });
 
-  const text = "Welcome to My Simple Website";
+  const text = "MURATA  HIDEYUKI";
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6">
-      {/* ナビゲーションバー */}
-      <nav className="w-full max-w-4xl flex justify-between items-center bg-white p-4 shadow-md mb-8 rounded-lg">
-        <a href="#" className="text-lg font-semibold text-blue-600">
-          MyWebsite
-        </a>
-        <div className="space-x-4">
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            Home
-          </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            About
-          </a>
-          <a href="#" className="text-gray-600 hover:text-blue-600">
-            Contact
-          </a>
-        </div>
-      </nav>
-
+    <main className="min-h-screen flex flex-col items-center justify-center p-6 animate-gradientAnimation">
       {/* メインコンテンツ */}
-      <div className="text-center max-w-2xl">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+      <div className="text-center ">
+        <h1 className="text-9xl text-gray-800 mb-4">
           {text.split("").map((char, index) => (
             <span
               key={index}
@@ -47,25 +29,17 @@ export default async function Home() {
         </h1>
 
         <p className="text-gray-600 mb-6">
-          This is a minimal example built with Next.js and Tailwind CSS.
-          Customize it to make it your own!
+          このサイトはNEXT.jsと、CSSフレームワークのTailwindで制作し、
+          <br />
+          コンテンツ更新はヘッドレスCMSのmicroCMSを採用しております。
         </p>
 
         <NewsList news={data.contents} />
-
-        <div className="mt-8">
-          <a
-            href="#"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-500 transition"
-          >
-            Get Started
-          </a>
-        </div>
       </div>
 
       {/* フッター */}
       <footer className="w-full max-w-4xl mt-16 text-center text-gray-500 text-sm">
-        © 2024 MyWebsite. All rights reserved.
+        © 2024 All rights reserved.
       </footer>
     </main>
   );
