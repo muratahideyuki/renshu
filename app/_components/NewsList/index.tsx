@@ -37,7 +37,9 @@ export default function NewsList({ news }: Props) {
             <dt>{article.title}</dt>
             <dd
               className="text-gray-600 mt-2"
-              dangerouslySetInnerHTML={{ __html: article.content }}
+              dangerouslySetInnerHTML={
+                article.content ? { __html: article.content } : undefined
+              }
             />
           </dl>
         </li>
