@@ -10,13 +10,13 @@ export default async function Home() {
     limit: TOP_NEWS_LIMIT,
   });
 
-  const text = "MURATA  HIDEYUKI";
+  const text = "PORTFOLIO";
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-6 ">
       {/* メインコンテンツ */}
-      <div className="text-center ">
-        <h1 className="text-9xl text-gray-800 mb-4">
+      <div className="">
+        <h1 className=" text-[min(13vw,90px)] text-gray-800 mb-4">
           {text.split("").map((char, index) => (
             <span
               key={index}
@@ -28,10 +28,10 @@ export default async function Home() {
           ))}
         </h1>
 
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-20">
           このサイトはNEXT.jsと、CSSフレームワークのTailwindで制作し、
           <br />
-          コンテンツ更新はヘッドレスCMSのmicroCMSを採用しております。
+          コンテンツ更新はヘッドレスCMSのmicroCMSを採用、CLOUDFLAREでデプロイし公開しております。
         </p>
 
         <NewsList news={data.contents} />

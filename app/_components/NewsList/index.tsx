@@ -13,7 +13,7 @@ export default function NewsList({ news }: Props) {
     return <p>記事がない</p>;
   }
   return (
-    <ul className="grid grid-cols-1 gap-6 md:grid-cols-1 mb-8">
+    <ul className="grid grid-cols-1 gap-12 md:grid-cols-2 mb-8">
       {news.map((article) => (
         <li key={article.id} className="mb-8">
           {article.thumbnail ? (
@@ -35,7 +35,10 @@ export default function NewsList({ news }: Props) {
           )}
           <dl>
             <dt>{article.title}</dt>
-            <dd></dd>
+            <dd
+              className="text-gray-600 mt-2"
+              dangerouslySetInnerHTML={{ __html: article.content }}
+            />
           </dl>
         </li>
       ))}
