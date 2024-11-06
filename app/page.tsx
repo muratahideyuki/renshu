@@ -15,7 +15,7 @@ export default async function Home() {
   const text = "PORTFOLIO";
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-6 ">
+    <main className="min-h-screen flex flex-col items-center justify-center p-6 max-w-full mx-auto">
       {/* メインコンテンツ */}
       <div className="">
         <h1 className=" text-[min(13vw,90px)] text-gray-800 mb-4">
